@@ -1,0 +1,8 @@
+<% @data.each do |data| %>
+  <h1><%= data["repo"]["name"] %> </h1>
+  <%if data["payload"]["commits"] %>
+  <%= data["payload"]["commits"][0]["message"] %>
+  <% end %>
+  <br>
+  <br>
+<% end %>
